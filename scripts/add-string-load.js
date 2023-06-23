@@ -61,7 +61,7 @@ async function addString() {
 
     function generateWG() {
         for (let i = 0; i < 100; i++) {
-            constinuousString += "wg()";
+            constinuousString += "Wg()";
         }
     }
     generateWG();
