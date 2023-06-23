@@ -1,12 +1,12 @@
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.setBadgeText({
-        text: "OFF"
+        text: ""
     });
 });
 
 chrome.action.onClicked.addListener(async (tab) => {
     const prevState = await chrome.action.getBadgeText({ tabId: tab.id });
-    const nextState = prevState === 'ON' ? 'OFF' : 'ON'
+    const nextState = prevState === 'ON' ? '' : 'ON';
 
     await chrome.action.setBadgeText({
         tabId: tab.id,
@@ -24,7 +24,7 @@ chrome.action.onClicked.addListener(async (tab) => {
             files: ["focus-element.css"],
             target: { tabId: tab.id },
         });
-    } else if (nextState === "OFF") {
+    } else if (nextState === "") {
         await chrome.scripting.executeScript(
             {
                 target: { tabId: tab.id, allFrames: true },
@@ -36,4 +36,11 @@ chrome.action.onClicked.addListener(async (tab) => {
             target: { tabId: tab.id },
         });
     }
+});
+
+chrome.runtime.onMessage.addListener(function (request, sender) {
+    if (request.type == "notification") {
+        chrome.notifications.create('notification', request.options, function () { });
+    }
+    console.log(request.options);
 });

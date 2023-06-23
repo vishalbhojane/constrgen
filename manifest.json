@@ -1,9 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "String Generator By Vishal",
-  "version": "0.2",
-  "description": "Generate continuous string and replace with current text",
+  "name": "Constrgen - Test String Generator",
+  "version": "0.3",
+  "description": "Generate continuous string \"wg()\" and replace with current text",
   "author": "Vishal Bhojane",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-64.png",
+    "128": "images/icon-128.png"
+ },
   "action": {
     "default_icon": {
       "16": "images/icon-16.png",
