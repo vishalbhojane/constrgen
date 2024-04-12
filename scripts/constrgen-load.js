@@ -118,7 +118,6 @@ async function addString(event) {
     }
 
     function generateWg() {
-        console.log('called generateWg()');
         for (let i = 0; i < 100; i++) {
             constinuousString += "Wg()";
         }
