@@ -17,22 +17,22 @@ chrome.action.onClicked.addListener(async (tab) => {
         await chrome.scripting.executeScript(
             {
                 target: { tabId: tab.id, allFrames: true },
-                files: ['scripts/add-string-load.js'],
+                files: ['scripts/constrgen-load.js'],
             }
         );
         await chrome.scripting.insertCSS({
-            files: ["focus-element.css"],
+            files: ["constrgen.css"],
             target: { tabId: tab.id },
         });
     } else if (nextState === "") {
         await chrome.scripting.executeScript(
             {
                 target: { tabId: tab.id, allFrames: true },
-                files: ['scripts/add-string-unload.js'],
+                files: ['scripts/constrgen-unload.js'],
             }
         );
         await chrome.scripting.removeCSS({
-            files: ["focus-element.css"],
+            files: ["constrgen.css"],
             target: { tabId: tab.id },
         });
     }

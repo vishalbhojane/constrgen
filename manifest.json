@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Constrgen - Test String Generator",
-  "version": "0.3",
-  "description": "Generate continuous string \"wg()\" and replace with current text",
+  "version": "0.4",
+  "description": "Generate continuous string \"Wg()\" and replace with current text",
   "author": "Vishal Bhojane",
   "icons": {
     "16": "images/icon-16.png",

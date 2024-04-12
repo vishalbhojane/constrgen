@@ -1,7 +1,7 @@
 body.constrgen--active .constrgen__indicator{
     font-family: sans-serif;
     text-transform: uppercase;
-    background: #f44336;
+    background: #19bbf1;
     color: #fff;
     position: fixed;
     right: 14px;
@@ -9,34 +9,32 @@ body.constrgen--active .constrgen__indicator{
     font-size: 12px;
     line-height: 12px;
     padding: 5px;
+    width: 87px;
     z-index: 99;
+    border-radius: 3px;
+    cursor: default;
 }
 
 body.constrgen--active .constrgen__overlay{
    background: #f4433655 !important;
    background-color: #f4433655 !important;
-   outline:#f44336 dashed 2px !important;
+   outline:#f44336 dashed 1px !important;
    color: #000 !important;
    opacity: 1 !important;
 }
 
-body.constrgen--active .constrgen__textNode:not(.constrgen__indicator):hover{
+body.constrgen--active .constrgen__textNode:not(.constrgen__indicator):not([data-constrgennoundo]):hover {
     outline: #f44336 solid 1px !important;
-    cursor: text;
 }
 
-body.constrgen--active .constrgen__indicator:hover{
-    cursor: default;
+body.constrgen--active .constrgen__textNode:not(.constrgen__indicator):not([data-constrgennoundo]) {
+    cursor: copy;
 }
 
 body.constrgen--active .constrgen__limitedText{
     background: #94cf96 !important;
     background-color: #94cf96 !important;
-    outline:#4caf50 dashed 2px !important;
+    outline:#4caf50 dashed 1px !important;
     color: #000 !important;
     opacity: 1 !important;
-}
-
-body.constrgen--active .constrgen__limitedText:hover{
-    outline:#4caf50 solid 1px !important;
 }
